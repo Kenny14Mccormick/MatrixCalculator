@@ -1,0 +1,96 @@
+﻿<Page x:Class="Матричный_калькулятор.Pages.MultiplyMatrices"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Матричный_калькулятор.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+   Title="MultiplyMatrices" FontFamily="Arial" FontSize="17" >
+
+    <Grid>
+        <StackPanel>
+            <TextBlock Margin="0,5" FontWeight="Bold" Text="Умножение матриц"/>
+            <TextBlock Text="Умножение матриц отличается от сложения и вычитания. Вместо выполнения операций поэлементно, каждый элемент в результирующей матрице вычисляется как сумма произведений соответствующих элементов в строках и столбцах исходных матриц." TextWrapping="Wrap" TextAlignment="Justify"/>
+            <TextBlock Margin="0,5" FontWeight="Bold" Text="Условия для умножения матриц"/>
+            <TextBlock Text="Для того чтобы умножить матрицу A размером m x n на матрицу B размером p x q, количество столбцов n в матрице A должно быть равно количеству строк p в матрице B. Результирующая матрица будет иметь размер m x q." TextWrapping="Wrap" TextAlignment="Justify"/>
+            <TextBlock Margin="0,5" FontWeight="Bold" Text="Пример умножения матриц разных размеров"/>
+            <TextBlock Text="Пусть у нас есть две матрицы A и B:" TextWrapping="Wrap" TextAlignment="Justify"/>
+            <TextBlock>A =</TextBlock>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Column="0" Grid.Row="0" Margin="0,0,10,0">1</TextBlock>
+                <TextBlock Grid.Column="1" Grid.Row="0" Margin="0,0,10,0">2</TextBlock>
+                <TextBlock Grid.Column="2" Grid.Row="0">3</TextBlock>
+                <TextBlock Grid.Column="0" Grid.Row="1" Margin="0,0,10,0">4</TextBlock>
+                <TextBlock Grid.Column="1" Grid.Row="1" Margin="0,0,10,0">5</TextBlock>
+                <TextBlock Grid.Column="2" Grid.Row="1">6</TextBlock>
+            </Grid>
+
+            <TextBlock>B =</TextBlock>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Column="0" Grid.Row="0" Margin="0,0,10,0">7</TextBlock>
+                <TextBlock Grid.Column="1" Grid.Row="0">8</TextBlock>
+                <TextBlock Grid.Column="0" Grid.Row="1" Margin="0,0,10,0">9</TextBlock>
+                <TextBlock Grid.Column="1" Grid.Row="1">10</TextBlock>
+                <TextBlock Grid.Column="0" Grid.Row="2">11</TextBlock>
+                <TextBlock Grid.Column="1" Grid.Row="2">12</TextBlock>
+            </Grid>
+
+            <TextBlock>Тогда A * B будет равно:</TextBlock>
+            <TextBlock>A * B =</TextBlock>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Column="0" Grid.Row="0" Margin="0,0,10,0">1*7+2*9+3*11</TextBlock>
+                <TextBlock Grid.Column="1" Grid.Row="0">1*8+2*10+3*12</TextBlock>
+                <TextBlock Grid.Column="0" Grid.Row="1" Margin="0,0,10,0">4*7+5*9+6*11</TextBlock>
+                <TextBlock Grid.Column="1" Grid.Row="1">4*8+5*10+6*12</TextBlock>
+            </Grid>
+
+            <TextBlock>То есть:</TextBlock>
+            <TextBlock>A * B =</TextBlock>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Column="0" Grid.Row="0" Margin="0,0,10,0">58</TextBlock>
+                <TextBlock Grid.Column="1" Grid.Row="0">64</TextBlock>
+                <TextBlock Grid.Column="0" Grid.Row="1" Margin="0,0,10,0">139</TextBlock>
+                <TextBlock Grid.Column="1" Grid.Row="1">154</TextBlock>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Page>

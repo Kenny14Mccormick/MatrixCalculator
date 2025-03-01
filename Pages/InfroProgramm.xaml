@@ -1,0 +1,79 @@
+﻿<Window x:Class="Матричный_калькулятор.Pages.InfroProgramm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Матричный_калькулятор.Pages"
+        mc:Ignorable="d"
+           Title="Информация о программе" FontFamily="Arial" WindowStartupLocation="CenterScreen" FontSize="17" Height="850" MinHeight="850" Width="1200" MinWidth="1200" Background="#BDF9FF" Icon="/Images/Matrix_Icon.ico">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="О программе" Grid.ColumnSpan="4" Grid.Row="1" Grid.Column="6" TextAlignment="Center" VerticalAlignment="Bottom"/>
+        <TextBlock Text="Матричный калькулятор - это программа, которая позволяет выполнять различные операции над матрицами. Вот основные функции, которые поддерживает программа:" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="14" Grid.RowSpan="3"  TextWrapping="Wrap" TextAlignment="Justify"/>
+        <TextBlock Text="1. Создание матриц: Пользователь может ввести количество матриц, которые он хочет создать, а затем задать размер каждой матрицы (количество строк и столбцов). Для каждой матрицы создается набор текстовых полей, в которые пользователь может ввести значения элементов матрицы. Максимальное количество матриц, которые пользователь может создать, составляет 10. Кроме того, каждая матрица может содержать не более 20 строк и 20 столбцов." Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="14" Grid.RowSpan="4"  TextWrapping="Wrap" TextAlignment="Justify" Margin="10,0,0,0"/>
+        <TextBlock Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="14" Grid.RowSpan="3"  TextWrapping="Wrap" TextAlignment="Justify" Margin="10,7,0,0"><Run Text="2. "/><Run Text="Сохранение результатов в файл: После выполнения операций над матрицами, пользователь может сохранить результаты в файл для последующего использования. Для этого предусмотрена функция «Сохранить  файл», которая позволяет экспортировать полученные данные в формате, удобном для чтения и обработки."/></TextBlock>
+        <TextBlock Grid.Row="12" Grid.Column="1" Grid.ColumnSpan="14" Grid.RowSpan="3"  TextWrapping="Wrap" TextAlignment="Justify" Margin="10,0,0,0"><Run Text="3. "/><Run Text="Загрузка матриц и операций: Программа также предоставляет возможность загрузки ранее сохраненных матриц и операций. Это позволяет быстро восстановить рабочее состояние программы и продолжить работу с  теми же данными. Функция «Загрузить» позволяет выбрать операцию из списка, после чего данные автоматически загружаются в программу, и пользователь может продолжить их обработку."/></TextBlock>
+
+        <TextBlock Grid.Row="15" Grid.Column="1" Grid.ColumnSpan="14" Grid.RowSpan="2"  TextWrapping="Wrap" TextAlignment="Justify" Margin="10,5,0,0" Text="4. Заполнение матриц случайными числами: Под каждой матрицей есть две кнопки, которые позволяют заполнить матрицу случайными числами. Одна кнопка заполняет матрицу случайными целыми числами, а другая - случайными дробными числами."/>
+        <TextBlock Grid.Row="17" Grid.Column="1" Grid.ColumnSpan="14" Grid.RowSpan="2"  TextWrapping="Wrap" TextAlignment="Justify" Margin="10,0,0.5,0" Text="5. Операции над матрицами: Пользователь может ввести операцию, которую он хочет выполнить над матрицами. Операция вводится в виде строки, например «A+B», где «A» и «B» - это имена матриц, а «+» - это операция, которую нужно выполнить. "/>
+        <TextBlock Text="Программа поддерживает следующие операции:" Grid.Row="19" Grid.Column="1" Grid.ColumnSpan="14" Grid.RowSpan="3"  TextWrapping="Wrap" TextAlignment="Justify" Margin="10,0,0,0"/>
+        <TextBlock Text="a. сложение матриц (+)" Grid.Row="20" Grid.Column="1" Grid.ColumnSpan="14" Grid.RowSpan="3"  TextWrapping="Wrap" TextAlignment="Justify" Margin="20,0,0,0"/>
+        <TextBlock Text="b. вычитание матриц (-)" Grid.Row="21" Grid.Column="1" Grid.ColumnSpan="14" Grid.RowSpan="3"  TextWrapping="Wrap" TextAlignment="Justify" Margin="20,0,0,0"/>
+        <TextBlock Text="c. умножение матриц (*)" Grid.Row="22" Grid.Column="1" Grid.ColumnSpan="14" Grid.RowSpan="3"  TextWrapping="Wrap" TextAlignment="Justify" Margin="20,0,0,0"/>
+        <TextBlock Text="d. умножение матрицы на скаляр (например, 2A умножает все элементы матрицы A на 2)" Grid.Row="23" Grid.Column="1" Grid.ColumnSpan="14" Grid.RowSpan="3"  TextWrapping="Wrap" TextAlignment="Justify" Margin="20,0,0,0"/>
+        <TextBlock Text="e. транспонирование матриц: Пользователь может транспонировать матрицу, нажав на кнопку «Транспонировать» под матрицей." Grid.Row="24" Grid.Column="1" Grid.ColumnSpan="14" Grid.RowSpan="3"  TextWrapping="Wrap" TextAlignment="Justify" Margin="20,0,0,0"/>
+        <TextBlock Text="После выполнения операции результат отображается в новом окне. Если произошла ошибка (например, матрицы не совпадают по размеру для выполнения операции), программа покажет сообщение об ошибке. Это обеспечивает удобство и эффективность работы с матрицами." Grid.Row="26" Grid.Column="1" Grid.ColumnSpan="14" Grid.RowSpan="3"  TextWrapping="Wrap" TextAlignment="Justify" Margin="10,0,0,0"/>
+        <Button Grid.Column="7" Content="Назад" Grid.Row="28" Grid.ColumnSpan="2" Grid.RowSpan="2" Click="Button_Click"/>
+
+    </Grid>
+</Window>

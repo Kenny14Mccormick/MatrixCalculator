@@ -1,0 +1,67 @@
+﻿<Window x:Class="Матричный_калькулятор.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Матричный_калькулятор"
+        mc:Ignorable="d"
+        Title="Матричный калькулятор" Height="550" MinHeight="550" Width="900" MinWidth="900" WindowStartupLocation="CenterScreen" Background="#BDF9FF" FontSize="23"  >
+    <Window.Resources>
+        <ResourceDictionary>
+            <RoutedUICommand x:Key="f1" Text="Another Text"/>
+            <RoutedUICommand x:Key="f2" Text="Anothe Text"/>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Window.InputBindings>
+        <KeyBinding Key="F1" Command="{StaticResource f1}"/>
+        <KeyBinding Key="F2" Command="{StaticResource f2}"/>
+    </Window.InputBindings>
+    <Window.CommandBindings>
+        <CommandBinding Command="{StaticResource f1}" Executed="F1Shortcut1"/>
+        <CommandBinding Command="{StaticResource f2}" Executed="F2Shortcut1"/>
+    </Window.CommandBindings>
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Image Grid.Column="9" Grid.Row="3" Grid.RowSpan="6" Grid.ColumnSpan="3" Source="/Images/Matrix_Image.png"  />
+        <Image Grid.ColumnSpan="2" Grid.RowSpan="3" Source="/Images/matrix.png"  />
+        <TextBlock Text="Матричный калькулятор" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="3" Grid.ColumnSpan="7" Grid.RowSpan="2" FontSize="35"/>
+        <Button  ToolTip="Выполнение операций над матрицами"  Grid.Row="3" Grid.Column="5" Content="Операции" Click="Btn_Main_Click" Grid.ColumnSpan="3" Grid.RowSpan="2"  />
+        <Button ToolTip="Информация о программе (F2)"  Grid.Row="9" Grid.Column="5" Content="О программе" Click="Btn_Info_Click" Grid.ColumnSpan="3" Grid.RowSpan="2"  />
+        <Button ToolTip="Информация об основных операциях над матрицами"  Grid.Row="6" Grid.Column="5"   Click="Btn_Teoria_Click" Grid.ColumnSpan="3" Grid.RowSpan="2">
+            <Button.Content>
+                <TextBlock Text="Теоретический материал" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Center"/>
+            </Button.Content>
+        </Button>
+        <Button ToolTip="Информация о разработчике (F1)"   Content="Справка" Click="Btn_Spravka_Click" Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Column="1" Grid.Row="8"  />
+
+    </Grid>
+</Window>
